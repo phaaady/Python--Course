@@ -1,0 +1,114 @@
+## Lists and Dictionaries
+
+In order to create a dictionary in python, 
+
+
+{Key : Value}
+```
+
+If we want more than one key and value, we use ‘ , ’ as shown below 
+
+
+{"fadi" : "Best player", "Messi" : "Best PLayer" }
+
+
+We can assign the entire dictionary to a variable as shown below 
+
+programming = {"forloop" : "easy", "whileloop" : " tough ",}
+
+
+In order to get a specific value from the dictionary , we give the key 
+
+print(programming["fadi"])
+
+
+Adding new items to dictionary later in the program
+
+programming["cr7"] = "Second best player"
+
+
+It’s usually best approach to start out with an empty dictionary, and then later add as we go on with our code in the later stages.
+
+empty_dictionary = {}
+
+
+To wipe an existing dictionary we can do the following 
+
+
+programming = {}
+
+
+This can be used if we want to clear out a user’s progress, if a game starts over from beginning or anything like that.
+
+To edit an item in a dictionary
+
+programming["fadi"] = "worst player"
+
+
+Looping through a dictionary :
+
+for key in programming:
+	print(key)
+	print(programming[key])
+
+
+### Student Grading Program
+
+student_scores = {"Fadi" = 100 , "Ashiq" = 200 , "Shad" = 300}
+
+#create an empty dictionary 
+student_grades = {}
+
+for student in student_scores:
+	score = student_scores[student]
+	if score>90:
+			student_grades[student] = "Outstanding"
+	elif score>80:
+			student_grades[student] = "Excellent"
+	elif score>70:
+			student_grades[student] = "Good"
+	else:
+			student_grades[student] = "Fail"
+
+print(student_grades)
+	
+
+
+### Nesting Lists and Dictionaries
+
+#nesting a list inside a dictionary
+travel_log = {"India": ["Kerala", "Delhi", "Rajasthan"]}
+
+
+- Each key can only have one value, you can’t assign more than one value to a specific key.
+- Hence, to give a number of values to a key, we can give a list. (as shown)
+
+#nesting a dictionary within a dictionary
+"France": {"visited":["paris", "Lille", "Dijon"]}
+
+
+#nesting dictionary in a list
+travel_log = [
+			"country": "france", # the key "country" holds a string
+		  "visited": ["paris", "lille", "Dijon"] # the key "visited" holds a list
+]
+```
+
+## Interactive Coding Exercise
+
+We’re going to create a function that add countries into a travel log.
+
+def add_new_country (name, time_visited, cities_visited)
+		new_country = {}
+		new_country["country"] = name
+		new_country["visits"] = times_visited
+		new_country["cities"] = cities_visited
+		#now to append/update to our already existing dictionary
+		travel_log.append(new_country)
+```
+
+💡 append() is only used for adding to lists and not dictionaries.
+
+</aside>
+
+# Blind Auction Program
